@@ -1,0 +1,69 @@
+package com.imooc.json;
+
+import java.util.Date;
+
+import com.alibaba.fastjson.annotation.JSONField;
+
+public class Employee {
+	
+	private Integer empno;
+	private String ename;
+	private String job;
+	//格式化日期
+	// @JSONField(format="yyyy-MM-dd HH:mm:ss SSS")
+	@JSONField(name = "hiredate", format = "yyyy-MM-dd")
+	private Date hdate;
+	private Float salary;
+	//不对下面的dname进行初始化
+	@JSONField(serialize = false)
+	private String dname;
+
+	public Integer getEmpno() {
+		return empno;
+	}
+
+	public void setEmpno(Integer empno) {
+		this.empno = empno;
+	}
+
+	public String getEname() {
+		return ename;
+	}
+
+	public void setEname(String ename) {
+		this.ename = ename;
+	}
+
+	public String getJob() {
+		return job;
+	}
+
+	public void setJob(String job) {
+		this.job = job;
+	}
+
+	public Date getHdate() {
+		return hdate;
+	}
+
+	public void setHdate(Date hdate) {
+		this.hdate = hdate;
+	}
+
+	public Float getSalary() {
+		return salary;
+	}
+
+	public void setSalary(Float salary) {
+		this.salary = salary;
+	}
+
+	public String getDname() {
+		return dname;
+	}
+
+	public void setDname(String dname) {
+		this.dname = dname;
+	}
+
+}
